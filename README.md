@@ -7,11 +7,16 @@ Bash, Coreutils, Grep, OpenSSH, OpenSSL, Curl and more.
 
 ## Components
 
+* [busybox-musl] `docker.io/busybox:1.35-musl`
 * [static-bash] `ghcr.io/awesome-containers/static-bash:latest`
+* [static-dash] `ghcr.io/awesome-containers/static-dash:latest`
 * [static-coreutils] `ghcr.io/awesome-containers/static-coreutils:latest`
+* [static-gzip] `ghcr.io/awesome-containers/static-gzip:latest`
+* [static-tar] `ghcr.io/awesome-containers/static-tar:latest`
 * [static-grep] `ghcr.io/awesome-containers/static-grep:latest`
 * [static-sed] `ghcr.io/awesome-containers/static-sed:latest`
 * [static-findutils] `ghcr.io/awesome-containers/static-findutils:latest`
+* [static-diffutils] `ghcr.io/awesome-containers/static-diffutils:latest`
 * [static-gawk] `ghcr.io/awesome-containers/static-gawk:latest`
 * [static-procps] `ghcr.io/awesome-containers/static-procps:latest`
 * [static-curl] `ghcr.io/awesome-containers/static-curl:latest`
@@ -20,7 +25,7 @@ Bash, Coreutils, Grep, OpenSSH, OpenSSL, Curl and more.
 
 ## Image
 
-> ~ 40M
+> ~ 36M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest
@@ -32,7 +37,7 @@ docker.io/awesomecontainers/corebox:0.1.0
 
 Slim CoreBox packaged with [UPX]
 
-> ~ 18M
+> ~ 17M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest-slim
@@ -45,11 +50,16 @@ docker.io/awesomecontainers/corebox:0.1.0-slim
 [UPX]: https://upx.github.io/
 [BusyBox]: https://busybox.net/
 
+[busybox-musl]: https://github.com/docker-library/busybox
 [static-bash]: https://github.com/awesome-containers/static-bash
+[static-dash]: https://github.com/awesome-containers/static-dash
 [static-coreutils]: https://github.com/awesome-containers/static-coreutils
+[static-gzip]: https://github.com/awesome-containers/static-gzip
+[static-tar]: https://github.com/awesome-containers/static-tar
 [static-grep]: https://github.com/awesome-containers/static-grep
 [static-sed]: https://github.com/awesome-containers/static-sed
 [static-findutils]: https://github.com/awesome-containers/static-findutils
+[static-diffutils]: https://github.com/awesome-containers/static-diffutils
 [static-gawk]: https://github.com/awesome-containers/static-gawk
 [static-procps]: https://github.com/awesome-containers/static-procps
 [static-curl]: https://github.com/awesome-containers/static-curl

@@ -36,6 +36,24 @@ jobs:
           <<: *latest-release
           repository: awesome-containers/static-bash
 
+      - id: static-dash
+        uses: *latest-action
+        with:
+          <<: *latest-release
+          repository: awesome-containers/static-dash
+
+      - id: static-gzip
+        uses: *latest-action
+        with:
+          <<: *latest-release
+          repository: awesome-containers/static-gzip
+
+      - id: static-tar
+        uses: *latest-action
+        with:
+          <<: *latest-release
+          repository: awesome-containers/static-tar
+
       - id: static-grep
         uses: *latest-action
         with:
@@ -53,6 +71,12 @@ jobs:
         with:
           <<: *latest-release
           repository: awesome-containers/static-findutils
+
+      - id: static-diffutils
+        uses: *latest-action
+        with:
+          <<: *latest-release
+          repository: awesome-containers/static-diffutils
 
       - id: static-gawk
         uses: *latest-action
@@ -113,9 +137,13 @@ jobs:
           build-args: &build-args |
             COREUTILS_VERSION=${{ steps.static-coreutils.outputs.release }}
             BASH_VERSION=${{ steps.static-bash.outputs.release }}
+            DASH_VERSION=${{ steps.static-dash.outputs.release }}
+            GZIP_VERSION=${{ steps.static-gzip.outputs.release }}
+            TAR_VERSION=${{ steps.static-tar.outputs.release }}
             GREP_VERSION=${{ steps.static-grep.outputs.release }}
             SED_VERSION=${{ steps.static-sed.outputs.release }}
             FINDUTILS_VERSION=${{ steps.static-findutils.outputs.release }}
+            DIFFUTILS_VERSION=${{ steps.static-diffutils.outputs.release }}
             GAWK_VERSION=${{ steps.static-gawk.outputs.release }}
             PROCPS_VERSION=${{ steps.static-procps.outputs.release }}
             CURL_VERSION=${{ steps.static-curl.outputs.release }}
