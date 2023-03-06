@@ -7,6 +7,8 @@ ARG BASH_VERSION=latest
 ARG DASH_VERSION=latest
 ARG COREUTILS_VERSION=latest
 ARG GZIP_VERSION=latest
+ARG XZ_VERSION=latest
+ARG BZIP2_VERSION=latest
 ARG TAR_VERSION=latest
 ARG GREP_VERSION=latest
 ARG SED_VERSION=latest
@@ -23,6 +25,8 @@ FROM $BASE/static-coreutils:$COREUTILS_VERSION AS static-coreutils
 FROM $BASE/static-bash:$BASH_VERSION AS static-bash
 FROM $BASE/static-dash:$BASH_VERSION AS static-dash
 FROM $BASE/static-gzip:$GZIP_VERSION AS static-gzip
+FROM $BASE/static-xz:$XZ_VERSION AS static-xz
+FROM $BASE/static-bzip2:$BZIP2_VERSION AS static-bzip2
 FROM $BASE/static-tar:$TAR_VERSION AS static-tar
 FROM $BASE/static-grep:$GREP_VERSION AS static-grep
 FROM $BASE/static-sed:$SED_VERSION AS static-sed
@@ -39,6 +43,8 @@ COPY --from=static-coreutils /etc/passwd /etc/group /etc/
 COPY --from=busybox /bin/ /bin/
 COPY --from=static-coreutils /bin/ /bin/
 COPY --from=static-gzip /bin/ /bin/
+COPY --from=static-xz /bin/ /bin/
+COPY --from=static-bzip2 /bin/ /bin/
 COPY --from=static-tar /bin/tar /bin/
 COPY --from=static-grep /bin/grep /bin/fgrep /bin/egrep /bin/
 COPY --from=static-sed /bin/sed /bin/sed

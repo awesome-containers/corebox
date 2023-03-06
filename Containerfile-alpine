@@ -1,0 +1,23 @@
+# https://hub.docker.com/_/busybox https://busybox.net/
+ARG ALPINE_VERSION=3.17
+FROM docker.io/alpine:$ALPINE_VERSION AS build
+
+# hadolint ignore=DL3018
+RUN apk add --no-cache \
+        bash \
+        dash \
+        coreutils \
+        gzip \
+        xz \
+        tar \
+        grep \
+        sed \
+        gawk \
+        findutils \
+        diffutils \
+        procps \
+        curl \
+        openssl \
+        openssh-client-common openssh-keygen openssh-keygen openssh-keysign
+
+ENTRYPOINT ["/bin/bash"]

@@ -12,6 +12,8 @@ Bash, Coreutils, Grep, OpenSSH, OpenSSL, Curl and more.
 * [static-dash] `ghcr.io/awesome-containers/static-dash:latest`
 * [static-coreutils] `ghcr.io/awesome-containers/static-coreutils:latest`
 * [static-gzip] `ghcr.io/awesome-containers/static-gzip:latest`
+* [static-xz] `ghcr.io/awesome-containers/static-xz:latest`
+* [static-bzip2] `ghcr.io/awesome-containers/static-bzip2:latest`
 * [static-tar] `ghcr.io/awesome-containers/static-tar:latest`
 * [static-grep] `ghcr.io/awesome-containers/static-grep:latest`
 * [static-sed] `ghcr.io/awesome-containers/static-sed:latest`
@@ -25,7 +27,7 @@ Bash, Coreutils, Grep, OpenSSH, OpenSSL, Curl and more.
 
 ## Image
 
-> ~ 36M
+> ~ 38M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest
@@ -37,7 +39,7 @@ docker.io/awesomecontainers/corebox:0.1.0
 
 Slim CoreBox packaged with [UPX]
 
-> ~ 17M
+> ~ 18M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest-slim
@@ -55,6 +57,8 @@ docker.io/awesomecontainers/corebox:0.1.0-slim
 [static-dash]: https://github.com/awesome-containers/static-dash
 [static-coreutils]: https://github.com/awesome-containers/static-coreutils
 [static-gzip]: https://github.com/awesome-containers/static-gzip
+[static-xz]: https://github.com/awesome-containers/static-xz
+[static-bzip2]: https://github.com/awesome-containers/static-bzip2
 [static-tar]: https://github.com/awesome-containers/static-tar
 [static-grep]: https://github.com/awesome-containers/static-grep
 [static-sed]: https://github.com/awesome-containers/static-sed

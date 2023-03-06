@@ -48,6 +48,18 @@ jobs:
           <<: *latest-release
           repository: awesome-containers/static-gzip
 
+      - id: static-xz
+        uses: *latest-action
+        with:
+          <<: *latest-release
+          repository: awesome-containers/static-xz
+
+      - id: static-bzip2
+        uses: *latest-action
+        with:
+          <<: *latest-release
+          repository: awesome-containers/static-bzip2
+
       - id: static-tar
         uses: *latest-action
         with:
@@ -139,6 +151,8 @@ jobs:
             BASH_VERSION=${{ steps.static-bash.outputs.release }}
             DASH_VERSION=${{ steps.static-dash.outputs.release }}
             GZIP_VERSION=${{ steps.static-gzip.outputs.release }}
+            XZ_VERSION=${{ steps.static-xz.outputs.release }}
+            BZIP2_VERSION=${{ steps.static-bzip2.outputs.release }}
             TAR_VERSION=${{ steps.static-tar.outputs.release }}
             GREP_VERSION=${{ steps.static-grep.outputs.release }}
             SED_VERSION=${{ steps.static-sed.outputs.release }}
