@@ -24,10 +24,11 @@ Bash, Coreutils, Grep, OpenSSH, OpenSSL, Curl and more.
 * [static-curl] `ghcr.io/awesome-containers/static-curl:latest`
 * [static-openssl] `ghcr.io/awesome-containers/static-openssl:latest`
 * [static-openssh] `ghcr.io/awesome-containers/static-openssh:latest`
+* [static-git] `ghcr.io/awesome-containers/static-git:latest`
 
 ## Image
 
-> ~ 38M
+> ~ 43M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest
@@ -39,7 +40,7 @@ docker.io/awesomecontainers/corebox:0.1.0
 
 Slim CoreBox packaged with [UPX]
 
-> ~ 18M
+> ~ 21M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest-slim
@@ -47,6 +48,19 @@ ghcr.io/awesome-containers/corebox:0.1.0-slim
 
 docker.io/awesomecontainers/corebox:latest-slim
 docker.io/awesomecontainers/corebox:0.1.0-slim
+```
+
+Default image of Alpine with the same set of tools for comparison with
+statically linked applications
+
+> ~ 30M (Without size of base image)
+
+```bash
+ghcr.io/awesome-containers/corebox:latest-alpine
+ghcr.io/awesome-containers/corebox:0.1.0-alpine
+
+docker.io/awesomecontainers/corebox:latest-alpine
+docker.io/awesomecontainers/corebox:0.1.0-alpine
 ```
 
 [UPX]: https://upx.github.io/
@@ -69,6 +83,7 @@ docker.io/awesomecontainers/corebox:0.1.0-slim
 [static-curl]: https://github.com/awesome-containers/static-curl
 [static-openssl]: https://github.com/awesome-containers/static-openssl
 [static-openssh]: https://github.com/awesome-containers/static-openssh
+[static-git]: https://github.com/awesome-containers/static-git
 
 <!--
 ```bash
@@ -76,11 +91,14 @@ image="localhost/${PWD##*/}"
 
 podman build -t "$image:latest" --no-cache --pull .
 podman build -t "$image:latest-slim" -f Containerfile-slim --no-cache --pull .
+podman build -t "$image:latest-alpine" -f Containerfile-alpine --no-cache --pull .
 
 echo "$image:latest"
 podman inspect "$image:latest" | jq '.[].Size' | numfmt --to=iec
 echo "$image:latest-slim"
 podman inspect "$image:latest-slim" | jq '.[].Size' | numfmt --to=iec
+echo "$image:latest-alpine"
+podman inspect "$image:latest-alpine" | jq '.[].Size' | numfmt --to=iec
 
 ```
 -->

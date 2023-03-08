@@ -9,15 +9,17 @@ RUN apk add --no-cache \
         coreutils \
         gzip \
         xz \
+        bzip2 \
         tar \
         grep \
         sed \
-        gawk \
         findutils \
         diffutils \
+        gawk \
         procps \
         curl \
         openssl \
-        openssh-client-common openssh-keygen openssh-keygen openssh-keysign
+        openssh-client-common openssh-keygen openssh-keygen openssh-keysign \
+        git
 
 ENTRYPOINT ["/bin/bash"]
