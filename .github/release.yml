@@ -1,4 +1,4 @@
-# yq 'explode(.)' .github/release.yml > release_exploded.yaml
+# yq 'explode(.)' .github/release.yml > .github/release_exploded.yaml
 
 name: Create Release
 on:
@@ -122,6 +122,12 @@ jobs:
           <<: *latest-release
           repository: awesome-containers/static-openssh
 
+      - id: static-rsync
+        uses: *latest-action
+        with:
+          <<: *latest-release
+          repository: awesome-containers/static-rsync
+
       - id: static-git
         uses: *latest-action
         with:
@@ -171,6 +177,7 @@ jobs:
             CURL_VERSION=${{ steps.static-curl.outputs.release }}
             OPENSSL_VERSION=${{ steps.static-openssl.outputs.release }}
             OPENSSH_VERSION=${{ steps.static-openssh.outputs.release }}
+            RSYNC_VERSION=${{ steps.static-rsync.outputs.release }}
             GIT_VERSION=${{ steps.static-git.outputs.release }}
 
       - name: Build and push slim container image

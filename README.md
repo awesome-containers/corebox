@@ -24,11 +24,12 @@ Bash, Coreutils, Grep, OpenSSH, OpenSSL, Curl and more.
 * [static-curl] `ghcr.io/awesome-containers/static-curl:latest`
 * [static-openssl] `ghcr.io/awesome-containers/static-openssl:latest`
 * [static-openssh] `ghcr.io/awesome-containers/static-openssh:latest`
+* [static-rsync] `ghcr.io/awesome-containers/static-rsync:latest`
 * [static-git] `ghcr.io/awesome-containers/static-git:latest`
 
 ## Image
 
-> ~ 43M
+> ~ 48M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest
@@ -40,7 +41,7 @@ docker.io/awesomecontainers/corebox:0.1.0
 
 Slim CoreBox packaged with [UPX]
 
-> ~ 21M
+> ~ 23M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest-slim
@@ -53,7 +54,7 @@ docker.io/awesomecontainers/corebox:0.1.0-slim
 Default image of Alpine with the same set of tools for comparison with
 statically linked applications
 
-> ~ 30M (Without size of base image)
+> ~ 31M (Without size of base image)
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest-alpine
@@ -83,6 +84,7 @@ docker.io/awesomecontainers/corebox:0.1.0-alpine
 [static-curl]: https://github.com/awesome-containers/static-curl
 [static-openssl]: https://github.com/awesome-containers/static-openssl
 [static-openssh]: https://github.com/awesome-containers/static-openssh
+[static-rsync]: https://github.com/awesome-containers/static-rsync
 [static-git]: https://github.com/awesome-containers/static-git
 
 <!--
