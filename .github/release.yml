@@ -31,6 +31,11 @@ jobs:
             token: ${{ secrets.GITHUB_TOKEN }}
           repository: awesome-containers/static-coreutils
 
+      - id: static-shadow
+        uses: *latest-action
+        with:
+          <<: *latest-release
+          repository: awesome-containers/static-shadow
 
       - id: static-bash
         uses: *latest-action
@@ -162,6 +167,7 @@ jobs:
             docker.io/${{ steps.env.outputs.repository }}:latest
           build-args: &build-args |
             COREUTILS_VERSION=${{ steps.static-coreutils.outputs.release }}
+            SHADOW_VERSION=${{ steps.static-shadow.outputs.release }}
             BASH_VERSION=${{ steps.static-bash.outputs.release }}
             DASH_VERSION=${{ steps.static-dash.outputs.release }}
             GZIP_VERSION=${{ steps.static-gzip.outputs.release }}

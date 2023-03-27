@@ -11,6 +11,7 @@ Bash, Coreutils, Grep, OpenSSH, OpenSSL, Curl and more.
 * [static-bash] `ghcr.io/awesome-containers/static-bash:latest`
 * [static-dash] `ghcr.io/awesome-containers/static-dash:latest`
 * [static-coreutils] `ghcr.io/awesome-containers/static-coreutils:latest`
+* [static-shadow] `ghcr.io/awesome-containers/static-shadow:latest`
 * [static-gzip] `ghcr.io/awesome-containers/static-gzip:latest`
 * [static-xz] `ghcr.io/awesome-containers/static-xz:latest`
 * [static-bzip2] `ghcr.io/awesome-containers/static-bzip2:latest`
@@ -29,7 +30,7 @@ Bash, Coreutils, Grep, OpenSSH, OpenSSL, Curl and more.
 
 ## Image
 
-> ~ 48M
+> ~ 51M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest
@@ -41,7 +42,7 @@ docker.io/awesomecontainers/corebox:0.1.0
 
 Slim CoreBox packaged with [UPX]
 
-> ~ 23M
+> ~ 24M
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest-slim
@@ -54,7 +55,7 @@ docker.io/awesomecontainers/corebox:0.1.0-slim
 Default image of Alpine with the same set of tools for comparison with
 statically linked applications
 
-> ~ 31M (Without size of base image)
+> ~ 33M (Without size of base image)
 
 ```bash
 ghcr.io/awesome-containers/corebox:latest-alpine
@@ -71,6 +72,7 @@ docker.io/awesomecontainers/corebox:0.1.0-alpine
 [static-bash]: https://github.com/awesome-containers/static-bash
 [static-dash]: https://github.com/awesome-containers/static-dash
 [static-coreutils]: https://github.com/awesome-containers/static-coreutils
+[static-shadow]: https://github.com/awesome-containers/static-shadow
 [static-gzip]: https://github.com/awesome-containers/static-gzip
 [static-xz]: https://github.com/awesome-containers/static-xz
 [static-bzip2]: https://github.com/awesome-containers/static-bzip2
