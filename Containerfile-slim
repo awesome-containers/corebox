@@ -27,7 +27,7 @@ FROM docker.io/busybox:$BUSYBOX_VERSION AS busybox
 FROM $BASE/static-coreutils:$COREUTILS_VERSION-slim AS static-coreutils
 FROM $BASE/static-shadow:$SHADOW_VERSION-slim AS static-shadow
 FROM $BASE/static-bash:$BASH_VERSION-slim AS static-bash
-FROM $BASE/static-dash:$BASH_VERSION-slim AS static-dash
+FROM $BASE/static-dash:$DASH_VERSION-slim AS static-dash
 FROM $BASE/static-gzip:$GZIP_VERSION-slim AS static-gzip
 FROM $BASE/static-xz:$XZ_VERSION-slim AS static-xz
 FROM $BASE/static-bzip2:$BZIP2_VERSION-slim AS static-bzip2
@@ -39,7 +39,7 @@ FROM $BASE/static-diffutils:$DIFFUTILS_VERSION-slim AS static-diffutils
 FROM $BASE/static-gawk:$GAWK_VERSION-slim AS static-gawk
 FROM $BASE/static-procps:$PROCPS_VERSION-slim AS static-procps
 FROM $BASE/static-curl:$CURL_VERSION-slim AS static-curl
-FROM $BASE/static-openssl:$CURL_VERSION-slim AS static-openssl
+FROM $BASE/static-openssl:$OPENSSL_VERSION-slim AS static-openssl
 FROM $BASE/static-openssh:$OPENSSH_VERSION-slim AS static-openssh
 FROM $BASE/static-rsync:$RSYNC_VERSION-slim AS static-rsync
 FROM $BASE/static-git:$GIT_VERSION-slim AS static-git
